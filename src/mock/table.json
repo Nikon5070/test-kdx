@@ -1,0 +1,46 @@
+[
+  {
+    "id": 6,
+    "location": "Теплый стан",
+    "service": "Планирование в магазине",
+    "uuid": "d85492ec-5dbf-783f-8682-517601d4b4b3",
+    "request": "6984427",
+    "payment_date": "2019.10.10 21:07:03",
+    "slot_date": "2019.10.10 21:07:03",
+    "answer_code": 0,
+    "service_message": "Успешно"
+  },
+  {
+    "id": 3,
+    "location": "Нижний Новгород",
+    "service": "Планирование в магазине",
+    "uuid": "d85492ec-5dbf-783f-8682-517601d4b4b3",
+    "request": "3184427",
+    "payment_date": "2019.10.10 21:02:03",
+    "slot_date": "2019.10.10 21:02:03",
+    "answer_code": 1,
+    "service_message": "Платеж отклонен"
+  },
+  {
+    "id": 2,
+    "location": "Екатеринбург",
+    "service": "Планирование в магазине",
+    "uuid": "d85492ec-5dbf-783f-8682-517601d4b4b3",
+    "request": "2984427",
+    "payment_date": "2019.10.10 21:01:03",
+    "slot_date": "2019.10.10 21:01:03",
+    "answer_code": 6,
+    "service_message": "Успешно"
+  },
+  {
+    "id": 1,
+    "location": "Химки",
+    "service": "Планирование в гардеробов дистанционно",
+    "uuid": "d85492ec-5dbf-783f-8682-51760ed4b4b3",
+    "request": "2984427",
+    "payment_date": "2019.10.10 21:00:03",
+    "slot_date": "2019.10.10 21:00:03",
+    "answer_code": 7,
+    "service_message": "Успешно"
+  }
+]

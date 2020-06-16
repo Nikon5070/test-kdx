@@ -1,0 +1,11 @@
+{
+  "id": "ID",
+  "location": "Магазин",
+  "service": "Сервисы",
+  "uuid": "UUID",
+  "request": "Заявка",
+  "payment_date": "Дата платежа",
+  "slot_date": "Дата слота",
+  "answer_code": "Код ответа",
+  "service_message": "Сообщение сервиса"
+}
