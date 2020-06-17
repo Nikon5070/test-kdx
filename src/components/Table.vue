@@ -1,8 +1,7 @@
 <template>
   <TableWrapper
     class="table"
-    :header="header"
-    :main="main"
+    v-bind="$props"
   >
     <template
       #header="{ item, key }"

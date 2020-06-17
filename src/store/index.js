@@ -6,7 +6,6 @@ import initColumns from '@/mock/columns.json';
 
 Vue.use(Vuex);
 
-
 const ASC = 'ASC';
 const DESC = 'DESC';
 
@@ -20,7 +19,8 @@ export default new Vuex.Store({
     sort: {
       name: 'id',
       dir: ASC,
-    }
+    },
+    filter: {}
   },
 
   mutations: {
@@ -46,8 +46,37 @@ export default new Vuex.Store({
         name: col,
         dir: newDir
       }
+    },
+    SET_FILTER(state, { value, key }) {
+      if(!value) {
+        state.filter = Object.keys(state.filter)
+          .filter(item => item !== key)
+          .reduce((acc, cur) => ({
+            ...acc,
+            [cur]: state.filter[cur]
+          }), {})
+      } else {
+        state.filter = {
+          ...state.filter,
+          [key]: value
+        }
+      }
     }
   },
   actions: {},
+  getters: {
+    getList(state) {
+      const  { filter, data } = state;
+      const filterKeys = Object.keys(filter);
+
+      if(!filterKeys.length) {
+        return data;
+      }
+
+      return filterKeys.reduce((acc, cur) => (
+        [...acc, ...data.filter(item => item[cur] === filter[cur] && !acc.find(accItem => accItem[cur] === filter[cur]))]
+      ), [])
+    }
+  },
   modules: {}
 });
