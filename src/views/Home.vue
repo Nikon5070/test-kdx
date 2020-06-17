@@ -3,6 +3,7 @@
     <Table
       :header="header"
       :main="main"
+      @clickColumn="handleClickCol"
     />
   </div>
 </template>
@@ -22,6 +23,12 @@ export default {
       header: "columns",
       main: "data",
     })
+  },
+
+  methods: {
+    handleClickCol(col) {
+      this.$store.commit('SORT_DATA', {col})
+    }
   }
 };
 </script>

@@ -5,8 +5,14 @@
     :main="main"
   >
     <span> hello </span>
-    <template #header="{ item }">
-      {{ item }}
+    <template
+      #header="{ item, key }"
+    >
+      <span
+        @click="handleClickCol(key)"
+      >
+        {{ item }}
+      </span>
     </template>
     <template
       #main="{ item }"
@@ -34,6 +40,12 @@ export default {
       type: Array,
       default: () => []
     }
+  },
+
+  methods: {
+    handleClickCol(col) {
+      this.$emit('clickColumn', col)
+    },
   }
 };
 </script>

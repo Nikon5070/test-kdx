@@ -1,12 +1,12 @@
 <template>
   <table class="table-wrapper">
     <tr>
-      <td
-        v-for="(col, iCol) in header"
-        :key="iCol"
+      <th
+        v-for="(col, key) in header"
+        :key="key"
       >
-        <slot name="header" v-bind="{ item: col }"></slot>
-      </td>
+        <slot name="header" v-bind="{ item: col, key: key }"></slot>
+      </th>
     </tr>
     <tr
       v-for="(row, iRow) in main"
@@ -41,4 +41,11 @@ export default {
 };
 </script>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.table-wrapper{
+  th {
+    cursor: pointer;
+  }
+}
+
+</style>
