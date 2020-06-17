@@ -4,7 +4,6 @@
     :header="header"
     :main="main"
   >
-    <span> hello </span>
     <template
       #header="{ item, key }"
     >
