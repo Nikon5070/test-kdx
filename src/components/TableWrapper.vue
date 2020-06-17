@@ -26,26 +26,42 @@
 </template>
 
 <script>
-export default {
-  name: "TableWrapper",
-  props: {
+  export default {
+    name: "TableWrapper",
+    props: {
       header: {
-          type: Object,
-          default: () => ({})
+        type: Object,
+        default: () => ({})
       },
       main: {
-          type: Array,
-          default: () => []
+        type: Array,
+        default: () => []
       }
-  }
-};
+    }
+  };
 </script>
 
 <style scoped lang="scss">
-.table-wrapper{
-  th {
-    cursor: pointer;
+  .table-wrapper {
+    border-collapse: collapse;
+    tr {
+      border: 1px solid gray;
+      border-bottom: none;
+
+      &:last-child {
+        border-bottom: 1px solid gray;
+      }
+    }
+
+    td, th {
+      padding: 8px;
+    }
+
+    th {
+      cursor: pointer;
+      padding-top: 12px;
+      padding-bottom: 12px;
+    }
   }
-}
 
 </style>
